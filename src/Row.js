@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from "./axios";
 import React, { useState, useEffect } from "react";
 import "./Row.css";
 
@@ -9,7 +9,8 @@ function Row({ title, fetchUrl }) {
 
   useEffect(() => {
     async function fetchData() {
-      const request = await axios.get(fetchUrl);
+      const request = await axios.get(`${fetchUrl}`);
+      console.log(request);
       setMovies(request.data.results);
       return request;
     }
@@ -19,13 +20,13 @@ function Row({ title, fetchUrl }) {
   console.log(movies);
 
   return (
-    <div className='row'>
+    <div className="row">
       <h2>{title}</h2>
 
-      <div className='row__posters'>
+      <div className="row__posters">
         {movies.map((movie) => (
           <img
-            className='row__poster'
+            className="row__poster"
             src={`${base_url}${movie.poster_path}`}
             alt={movie.name}
           />
