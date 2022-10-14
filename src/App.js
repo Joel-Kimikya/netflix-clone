@@ -6,7 +6,7 @@ import Row from "./Row";
 function App() {
   return (
     <div className="App">
-      <h1>cler par</h1>
+      <h1>Hey Clever Programmer</h1>
       <Row
         title="NETFLIX ORIGINALS"
         fetchUrl={requests.fetchNetflixOriginals}
