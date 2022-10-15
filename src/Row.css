@@ -6,6 +6,10 @@
     overflow-x: auto;
 } */
 
+.row {
+    margin-left: 20px;
+}
+
 .row__posters {
     display: flex;
     overflow-y: hidden;
@@ -25,4 +29,13 @@
 
 .row__poster:hover {
     transform: scale(1.09);
+}
+
+.row__posterLarge {
+    max-height: 250px;
+}
+
+.row__posterLarge:hover {
+    transform: scale(1.09);
+    opacity: 1;
 }
