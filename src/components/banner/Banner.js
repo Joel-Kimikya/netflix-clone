@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import axios from "./axios";
-import requests from "./requests";
+import axios from "../../axios";
+import requests from "../../requests";
 import "./Banner.css";
 
 function Banner() {
@@ -47,7 +47,6 @@ function Banner() {
           {truncate(movie?.overview, 190)}
         </h1>
       </div>
-      <div className='banner--fadeBotton' />
     </header>
   );
 }
